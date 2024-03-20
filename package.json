@@ -12,12 +12,12 @@
     "start": "npx http-server -c-1 ."
   },
   "jest": {
-    "transform": {}
+    "testEnvironment": "node"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.6.4"
+    "jest": "^29.7.0"
   },
   "dependencies": {
     "http-server": "^14.1.1"
