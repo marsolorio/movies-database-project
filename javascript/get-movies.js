@@ -1,4 +1,5 @@
-import { OPTIONS, API_URL } from "./constants.js";
+//get-movies.js
+import { OPTIONS, API_URL } from "./constants.js"; //full list
 
 export const get_movies = async() => {
   try {
@@ -6,6 +7,6 @@ export const get_movies = async() => {
     const result = await response.text();
     return JSON.parse(result).results;
   } catch (error) {
-    console.error(error);
+    throw error;
   }
 }
