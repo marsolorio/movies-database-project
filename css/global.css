@@ -2,7 +2,6 @@ body {
     margin: 0;
 }
 
-
 /* Header */
 header {
     position: relative;
@@ -56,7 +55,7 @@ button.sign-up {
 
 button.log-in {
     background-color: darkred;
-    border-color: darkred
+    border-color: darkred;
 }
 
 /* nav bar shop options */
@@ -81,6 +80,9 @@ div.banner {
     display: flex;
     height: 400px;
     background-image: url("../resources/images/banner.jpg");
+    background-size: contain; /* Image fits inside the container */
+    background-position: center; /* Center the image within the container */
+    background-repeat: no-repeat; /* Prevent image from repeating */
     align-items: end;
 }
 
@@ -90,7 +92,6 @@ button.more-information {
     background-color: darkred;
     font-size: medium;
 }
-
 
 /* City filter */
 div.filter {
@@ -125,9 +126,6 @@ div.filter div select {
     width: 200px;
 }
 
-
-
-
 /* movies */
 h1 {
     width: 100%;
@@ -139,7 +137,7 @@ h1 {
 }
 
 /*movie-list */
-div.movie-list{
+div.movie-list {
     display: grid;
     grid-template-columns: 
         repeat(
@@ -150,23 +148,29 @@ div.movie-list{
     padding: 0px 10% 30px 10%;
 }
 
-div.movie-list div.poster-container{
+div.movie-list div.poster-container {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align button at the bottom */
+    align-items: center;
+    position: relative;
+    padding-bottom: 20px; /* Add padding for space between image and button */
 }
 
-div.movie-list div.poster-container img{
+div.movie-list div.poster-container img {
     width: 100%;
-    height: auto;
+    height: 300px; /* Adjust the height value as needed */
 }
 
-div.movie-list div.poster-container button{
+div.movie-list div.poster-container button {
     border-radius: 0;
-    width: 100%;
+    width: 80%;
     background-color: darkred;
     border-color: darkred;
+    margin-top: 10px; /* Add margin for space between button and image */
 }
-
 
 /* footer */
 footer {
@@ -189,6 +193,5 @@ footer div h3 {
 
 footer div.apps > img {
     height: 17px;
-    margin: 3% 10px
-    
+    margin: 3% 10px;
 }
